@@ -1,12 +1,21 @@
 package hexlet.code;
 
-import hexlet.code.games.*;
+
+
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
+
 
 import java.util.Scanner;
 
-public class Cli {
+public final class Cli {
 
-    private static final Scanner scanner = new Scanner(System.in);
+    private Cli() { }
+
+    private static final Scanner SCANNER = new Scanner(System.in);
 
     private static String username;
 
@@ -15,7 +24,7 @@ public class Cli {
 
         if (username == null) {
             System.out.print("May I have your name? ");
-            username = scanner.nextLine();
+            username = SCANNER.nextLine();
         }
 
         System.out.printf("Hello, %s!\n", username);
@@ -23,27 +32,27 @@ public class Cli {
 
     public static void even() {
         greeting();
-        new Even().start(scanner, username);
+        new Even().start(SCANNER, username);
     }
 
     public static void calc() {
         greeting();
-        new Calc().start(scanner, username);
+        new Calc().start(SCANNER, username);
     }
 
     public static void gcd() {
         greeting();
-        new GCD().start(scanner, username);
+        new GCD().start(SCANNER, username);
     }
 
     public static void progression() {
         greeting();
-        new Progression().start(scanner, username);
+        new Progression().start(SCANNER, username);
     }
 
     public static void prime() {
         greeting();
-        new Prime().start(scanner, username);
+        new Prime().start(SCANNER, username);
     }
 
     public static void menu() {
@@ -76,7 +85,7 @@ public class Cli {
     }
 
     private static void exit() {
-        scanner.close();
+        SCANNER.close();
         System.exit(0);
     }
 }

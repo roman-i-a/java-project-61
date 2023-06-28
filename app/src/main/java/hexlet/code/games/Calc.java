@@ -3,13 +3,16 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 
-public class Calc extends Engine {
+public final class Calc extends Engine {
+
+    private static final int MAX_NUM = 100;
+    private static final int TOTAL_OPERATIONS = 3;
 
     @Override
     public void nextQuestion() {
-        int firstNumber = random.nextInt(100);
-        int secondNumber = random.nextInt(100);
-        switch (random.nextInt(3)) {
+        int firstNumber = random.nextInt(MAX_NUM);
+        int secondNumber = random.nextInt(MAX_NUM);
+        switch (random.nextInt(TOTAL_OPERATIONS)) {
             case 0 -> {
                 this.setQuestion(firstNumber + " - " + secondNumber);
                 this.setAnswer(String.valueOf(firstNumber - secondNumber));
@@ -21,6 +24,8 @@ public class Calc extends Engine {
             case 2 -> {
                 this.setQuestion(firstNumber + " * " + secondNumber);
                 this.setAnswer(String.valueOf(firstNumber * secondNumber));
+            }
+            default -> {
             }
         }
 
