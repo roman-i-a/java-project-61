@@ -16,7 +16,7 @@ public class Prime extends Engine {
 
     @Override
     public void nextQuestion() {
-        int number = random.nextInt(MAX_NUMBER);
+        int number = getRandom().nextInt(MAX_NUMBER);
         this.setQuestion(String.valueOf(number));
         this.setAnswer(isPrime(number) ? "yes" : "no");
     }

@@ -7,7 +7,7 @@ public class Even extends Engine {
 
     @Override
     public void nextQuestion() {
-        int number = random.nextInt(100);
+        int number = getRandom().nextInt(100);
         this.setQuestion(String.valueOf(number));
         this.setAnswer(number % 2 == 0 ? "yes" : "no");
     }

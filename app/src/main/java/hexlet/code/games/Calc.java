@@ -10,9 +10,9 @@ public final class Calc extends Engine {
 
     @Override
     public void nextQuestion() {
-        int firstNumber = random.nextInt(MAX_NUM);
-        int secondNumber = random.nextInt(MAX_NUM);
-        switch (random.nextInt(TOTAL_OPERATIONS)) {
+        int firstNumber = getRandom().nextInt(MAX_NUM);
+        int secondNumber = getRandom().nextInt(MAX_NUM);
+        switch (getRandom().nextInt(TOTAL_OPERATIONS)) {
             case 0 -> {
                 this.setQuestion(firstNumber + " - " + secondNumber);
                 this.setAnswer(String.valueOf(firstNumber - secondNumber));

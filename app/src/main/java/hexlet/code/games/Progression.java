@@ -11,10 +11,10 @@ public class Progression extends Engine {
 
     @Override
     public void nextQuestion() {
-        int length = random.nextInt(MIN_LENGTH, MAX_LENGTH);
-        int step = random.nextInt(MAX_STEP);
-        int position = random.nextInt(length);
-        int value = random.nextInt(MAX_START_VALUE);
+        int length = getRandom().nextInt(MIN_LENGTH, MAX_LENGTH);
+        int step = getRandom().nextInt(MAX_STEP);
+        int position = getRandom().nextInt(length);
+        int value = getRandom().nextInt(MAX_START_VALUE);
 
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < length; i++) {
