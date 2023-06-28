@@ -5,13 +5,12 @@ import hexlet.code.Engine;
 
 public final class Calc extends Engine {
 
-    private static final int MAX_NUM = 100;
     private static final int TOTAL_OPERATIONS = 3;
 
     @Override
     public void nextQuestion() {
-        int firstNumber = getRandom().nextInt(MAX_NUM);
-        int secondNumber = getRandom().nextInt(MAX_NUM);
+        int firstNumber = getRandom().nextInt(MAX_NUMBER);
+        int secondNumber = getRandom().nextInt(MAX_NUMBER);
         switch (getRandom().nextInt(TOTAL_OPERATIONS)) {
             case 0 -> {
                 this.setQuestion(firstNumber + " - " + secondNumber);
