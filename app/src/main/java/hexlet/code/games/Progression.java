@@ -3,7 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 
-public class Progression extends Engine {
+public final class Progression extends Engine {
     private static final int MIN_LENGTH = 5;
     private static final int MAX_LENGTH = 10;
     private static final int MAX_STEP = 15;

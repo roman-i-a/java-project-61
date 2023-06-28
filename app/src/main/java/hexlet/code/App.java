@@ -2,8 +2,10 @@ package hexlet.code;
 
 public class App {
 
-    public static void main(final String[] args) {
+    public App() {
 
+    }
+    public static void main(final String[] args) {
         Cli.menu();
     }
 }

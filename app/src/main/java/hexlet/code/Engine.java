@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public abstract class Engine {
     private static final int MAX_SCORE = 3;
+    protected static final int MAX_NUMBER = 100;
     private final Random random = new Random();
 
     public final Random getRandom() {
@@ -49,15 +50,15 @@ public abstract class Engine {
         return question;
     }
 
-    public final void setQuestion(final String question) {
-        this.question = question;
+    public final void setQuestion(final String value) {
+        this.question = value;
     }
 
     public final String getAnswer() {
         return answer;
     }
 
-    public final void setAnswer(String answer) {
-        this.answer = answer;
+    public final void setAnswer(final String value) {
+        this.answer = value;
     }
 }

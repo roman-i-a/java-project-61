@@ -2,10 +2,9 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-public class Prime extends Engine {
-    private static final int MAX_NUMBER = 10000;
+public final class Prime extends Engine {
 
-    private boolean isPrime(int number) {
+    private boolean isPrime(final int number) {
         for (int i = 2; i < number / 2 + 1; i++) {
             if (number % i == 0) {
                 return false;
